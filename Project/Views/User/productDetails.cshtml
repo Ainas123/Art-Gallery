@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "productDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<ProductTb>
+<div class="inner-wrapper"> 
+<section id="primary" class="content-full-width">
+    <div class="container">
+        <div class="main-title animate" data-animation="pullDown" data-delay="100">
+            <h3> Product Details </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+        </div>
+       
+        <div class="cart-wrapper">
+                
+                   
+                    @foreach(var pro in Model)
+                    {
+                    <div class="dt-sc-three-fifth column first">
+                        <div class="cart-thumb">
+
+                            <img src="@("~/product_images/"+pro.product_image)" asp-append-version="true" title="Acrylic">
+                        </div>
+                        </div>
+                        <div class="dt-sc-two-fifth column">
+                        <div class="project-details">
+                            <ul class="client-details">
+                                <li>
+                                    <p><span>Title :</span>@pro.product_name</p>
+                                </li>
+                                <li>
+                                    <p><span>Price :</span>@pro.product_price</p>
+                                </li>
+                                <li>
+                                    <p><span>Category :</span>@pro.cat_id</p>
+                                </li>
+                                <li>
+                                    <p><span>Description :</span>@pro.product_description</p>
+                                </li>
+                                <li>
+                                    <p><span>Uploaded :</span>Jan 12th, 2024 </p>
+                                </li>
+                                <li>
+                                    <p><span>Statistics :</span><i class="fa fa-eye"></i>2,318</p>
+                                </li>
+                                <li>
+                                    <p><span>Colors :</span><a href="#" class="yellow"></a><a href="#" class="green"></a><a href="#" class="orange"></a><a href="#" class="red"></a></p>
+                                </li>
+                                <li>
+                                <p class="submit"> <input type="submit" value="Add to Cart" name="submit" class="button" style="width:150px" /> 
+                                   <input type="submit" value="Back to Arts" name="submit" class="button" style="width:150px; margin-left:20px;" /> </p>
+
+                            </li>
+                            </ul>
+                        </div>
+                        </div>
+                    }
+
+                  
+          
+        </div>
+     
+    </div>
+</section>
+
+</div>

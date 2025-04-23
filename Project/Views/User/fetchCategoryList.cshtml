@@ -1,0 +1,8 @@
+﻿@model List<CategoryTb>
+<select class="shop-dropdown">
+<option hidden>Select Any Category</option>
+@foreach(var cat in Model)
+{               
+     <option value="1">@cat.category_name</option>
+}
+</select> 

@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "fetchuserProduct";
+    Layout = "~/Views/Shared/_userDashboard.cshtml";
+}
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-table"></i> Manage Product</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="@Url.Action("index","admin")">Home</a></li>
+                    <li><i class="fa fa-user"></i>Products</li>
+                    <li><i class="fa fa-th-list"></i>Manage Product</li>
+                </ol>
+            </div>
+        </div>
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Manage Product
+                    </header>
+                    <table class="table">
+                        <thead>
+
+                            <tr>
+                                <th>Product Id</th>
+                                <th>Product Name</th>
+                                <th>Product Price</th>
+                                <th>Product Image</th>
+
+
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var prod in Model)
+                            {
+                                <tr>
+                                    <td>@prod.product_id</td>
+                                    <td>@prod.product_name</td>
+                                    <td>@prod.product_price</td>
+                                    <td>
+                                        <img src="@("~/product_images/"+prod.product_image)" asp-append-version="true" height="40px"
+                                             width="50px" />
+                                    </td>
+
+                                    <td>
+                                        <a href="@Url.Action("updateProduct","Admin",new{id=prod.product_id})" class="btn btn-warning">Update</a>
+                                        || <a href="@Url.Action("productDetails","Admin",new{id=prod.product_id})" class="btn btn-success">Details</a>
+                                        || <a href="@Url.Action("deletePermissionProduct","Admin",new{id=prod.product_id})" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+
+                    </table>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- page end-->
+    </section>
+</section>
+
+<!--main content end-->

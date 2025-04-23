@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+
+    <div class="inner-wrapper">
+        <div class="container-fluid">
+            <div id="main">
+                
+
+                <section id="primary" class="content-full-width">
+                    <div class="fullwidth-section">
+                        <div class="container">
+                            <div class="main-title animate" data-animation="pullDown" data-delay="100">
+                                <h3> Contact </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+
+                            </div>
+                        </div>
+                        <div class="contact-section">
+                            <div class="container">
+                                <div id="contact_map" class="animate" data-animation="fadeInRight" data-delay="100">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115776.41675171615!2d66.98630565798356!3d24.931626249882772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3eb33f684a577aa1%3A0x8eef9ba9639151a5!2sMezzanine%20Floor%2C%20Rajput%20Twin%20Tower%D8%8C%20Main%20Shahrah-e-Pakistan%2C%20Federal%20B%20Area%20Block%2010%20Gulberg%20Town%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2075950!3m2!1d24.9316489!2d67.06870719999999!5e0!3m2!1sen!2s!4v1706530728525!5m2!1sen!2s" width="100" height="100" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <div class="dt-sc-contact-info animate" data-animation="fadeInLeft" data-delay="100">
+                                <h3>Artist Info</h3>
+                                <div class="dt-sc-contact-details"><span class="fa fa-map-marker"></span> Address: No-58 A, East Madison St, Baltimore, MD, USA </div>
+                                <div class="dt-sc-contact-details"><span class="fa fa-tablet"></span> Phone: +1 200 258 2145 </div>
+                                <div class="dt-sc-contact-details"><span class="fa fa-paperclip"></span> Fax: +1 100 458 2345 </div>
+                                <div class="dt-sc-contact-details"><span class="fa fa-envelope"></span> Email: <a href="/cdn-cgi/l/email-protection#1a63756f68747b777f5a6975777f777b737634797577"><span class="__cf_email__" data-cfemail="98e1f7edeaf6f9f5fdd8ebf7f5fdf5f9f1f4b6fbf7f5">[email&#160;protected]</span></a>                                    </div>
+                                <div class="dt-sc-contact-details"><span class="fa fa-globe"></span> Web: <a href="https://wedesignthemes.com">http://wedesignthemes.com</a> </div>
+                                <ul class="type3 dt-sc-social-icons">
+                                    <li class="twitter"><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                                    <li class="facebook"><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                    <li class="google"><a href="#"> <i class="fa fa-google"></i> </a></li>
+                                    <li class="dribbble"><a href="#"> <i class="fa fa-dribbble"></i> </a></li>
+                                    <li class="pinterest"><a href="#"> <i class="fa fa-pinterest"></i> </a></li>
+                                    <li class="linkedin"><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
+                                    <li class="flickr"><a href="#"> <i class="fa fa-flickr"></i> </a></li>
+                                    <li class="tumblr"><a href="#"> <i class="fa fa-tumblr"></i> </a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="dt-sc-hr-invisible-toosmall"></div>
+                    <div class="container">
+                        <div class="dt-sc-three-fourth column first animate" data-animation="fadeInDown" data-delay="100">
+                            <h3>Get in Touch</h3>
+                            <form class="enquiry-form" method="post" novalidate="novalidate" name="enqform">
+                                <div class="column dt-sc-one-third first">
+                                    <p class="input-text">
+                                        <input class="input-field" type="text" name="user_name" title="Enter your Name" placeholder="Name *" />
+                                    </p>
+                                </div>
+                                <div class="column dt-sc-one-third">
+                                    <p class="input-text">
+                                        <input class="input-field" type="text" autocomplete="off" name="user_email" title="Enter your valid id" placeholder="Email *" />
+                                    </p>
+                                </div>
+                                <div class="column dt-sc-one-third">
+                                    <p class="input-text">
+                                        <input class="input-field" type="text" autocomplete="off" name="user_country" placeholder="Country" />
+                                    </p>
+                                </div>
+                                <p class="input-text">
+                                    <textarea class="input-field" rows="3" cols="5" name="user_message" title="Enter your Message" placeholder="Message *"></textarea>
+                                </p>
+                                <p class="submit"> <input type="submit" value="Send" name="submit" class="button" /> </p>
+                            </form>
+                            <h6 class="text-danger">@TempData["message"]</h6>
+                            <div id="ajax_contactform_msg"></div>
+                        </div>
+                        <div class="dt-sc-one-fourth column animate" data-animation="fadeInRight" data-delay="100">
+                            <h5>London Office</h5>
+                            <div class="enquiry-details">
+                                <p> <i class="fa fa-cab"></i> 121 King St, Melbourne VIC 3, Australia </p>
+                                <p> <i class="fa fa-phone"></i> +61 3 8376 6284 </p>
+                                <p> <i class="fa fa-globe"></i> <a href="#"> envato.com </a> </p>
+                                <p> <i class="fa fa-envelope"></i> <a href="#"> <span class="__cf_email__" data-cfemail="9fedfafbfeedebdff8f2fef6f3b1fcf0f2">[email&#160;protected]</span> </a> </p>
+                            </div>
+                            <h5>Business Hours</h5>
+                            <ul class="dt-sc-working-hours">
+                                <li>Hotline is available for 24 hours a day!..</li>
+                                <li>Monday - Friday :<span> 8am to 6pm</span></li>
+                                <li>Saturday : <span>10am to 2pm</span></li>
+                                <li>Sunday : <span>Closed</span></li>
+                            </ul>
+                        </div>
+                        <div class="container">
+                            <div class="newsletter">
+
+                                <h3>Newsletter</h3>
+                                <form method="post" class="mailchimp-form dt-sc-one-half column first animate" data-animation="stretchLeft" data-delay="100" name="frmnewsletter" action="php/subscribe.php">
+                                    <p class="input-text">
+                                        <input class="input-field" type="email" name="mc_email" />
+                                        <label class="input-label">
+                                            <i class="fa fa-envelope-o icon"></i>
+                                            <span class="input-label-content">Mail</span>
+                                        </label>
+                                        <input type="submit" name="submit" class="submit" value="Subscribe" />
+                                    </p>
+                                </form>
+                                <div id="ajax_subscribe_msg"></div>
+                                <div class="newsletter-text animate dt-sc-one-half column" data-animation="stretchRight" data-delay="100"> <i class="fa fa-envelope-o"> </i> Feel free to place your Mail_ID and Subscribe to our Newsletter here. So that, you can receive our exiting Updates  </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

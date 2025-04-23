@@ -1,0 +1,32 @@
+﻿@model List<ProductTb>
+@foreach (var pro in Model)
+{      
+    
+    
+ 
+                    <li class="product-wrapper dt-sc-one-fifth">
+                        
+
+            <div class="product-container">
+            <a href="@Url.Action("productDetails","user",new{id=pro.product_id})">
+                    <div class="product-thumb"> <img src="@("~/product_images/"+pro.product_image)" alt="image" asp-append-version="true" /> </div>
+                </a>
+
+                <div class="product-title">
+                <form method="post" asp-action="AddtoCart">
+                    <input type="hidden" name="prod_id" value="@pro.product_id">
+                    <a href="@Url.Action("AddtoCart","user")" class="type1 dt-sc-button"> <span class="fa fa-shopping-cart"></span> Add to Cart </a>
+                    <a href="@Url.Action("productDetails","user",new{id=pro.product_id})" class="type1 dt-sc-button"> <span class="fa fa-unlink"></span> Options </a>
+
+                </form>
+                 
+                </div>
+            </div>
+
+            <div class="product-details">
+                <h5> <a href="#"> @pro.product_name </a> </h5>
+                <span class="amount"> @pro.product_price</span>
+            </div>
+      </li>
+    
+}

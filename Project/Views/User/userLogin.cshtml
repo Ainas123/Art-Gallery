@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "userLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="inner-wrapper">
+<div id="main">
+   
+    <section id="primary" class="content-full-width">
+        <form method="post">
+        <div class="container">
+            <div class="login">
+                <h3 class="title">Login Form</h3>
+                <div class="log_form">
+                    <div class="inputfield">
+                        <label>Email Address</label>
+                        <input type="text" class="input" name="userEmail">
+                    </div>
+                    <div class="inputfield">
+                        <label>Password</label>
+                        <input type="password" class="input" name="userPassword">
+                    </div>
+
+                    <br>
+
+                    <div class="inputfield">
+                        <input type="submit" value="Login" class="btn">
+                    </div>
+                    <br>
+
+                    <p style="text-align: center; font-size: 25px;">You don't have an account! 
+                        <a href="@Url.Action("userRegistration","user")" style="color: red;">Signup</a></p>
+                            <p style="text-align: center; font-size: 20px; color:red;">@ViewBag.message</p>
+                    </div>
+            </div>
+            </div>
+            </form> 
+            </section>
+</div>
+</div>

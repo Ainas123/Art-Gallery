@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewData["Title"] = "Arts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="inner-wrapper">
+    <div id="main">
+       
+        <section id="primary" class="content-full-width">
+            <div class="container">
+                <div class="main-title animate" data-animation="pullDown" data-delay="100">
+                    <h3> Arts </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                    <img src="images/title-line.png" alt="">
+                </div>
+            </div>
+            <div class="fullwidth-section shop-grid">
+                <div class="sorting-products">
+                    <div class="dt-sc-one-fifth column first">
+                        <div class="categories">
+                            <h5>Categories</h5>
+                            <div class="selection-box">
+                    @Html.Partial("fetchCategoryList",ViewData["category"])
+                    </div>
+                    </div>
+                    </div>
+                   
+                    <div class="dt-sc-one-fifth column">
+                        <div class="categories">
+                            <h5>Sort By</h5>
+                            <div class="selection-box">
+                                <select class="shop-dropdown">
+                                    <option value="-1" selected>Sort by</option>
+                                    <option value="1" class="fa fa-mortar-board">Popular Artist</option>
+                                    <option value="2" class="fa fa-money">Best Seller</option>
+                                    <option value="3" class="fa fa-thumb-tack">Featured Art</option>
+                                    <option value="4" class="fa fa-child">New Artist</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dt-sc-one-fifth column">
+                        <div class="categories">
+                            <h5>Art Type</h5>
+                            <div class="selection-box">
+                                <select class="shop-dropdown">
+                                    <option value="-1" selected>Choose your type</option>
+                                    <option value="1" class="fa fa-flask">Acrylic</option>
+                                    <option value="2" class="fa fa-paint-brush">Oil Painting</option>
+                                    <option value="2" class="fa fa-scissors">Sculpture</option>
+                                    <option value="3" class="fa fa-tint">Water Painting</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dt-sc-one-fifth column">
+                        <div class="categories">
+                            <h5>Size &amp; Shape</h5>
+                            <div class="selection-box">
+                                <select class="shop-dropdown">
+                                    <option value="-1" selected>Choose your shape</option>
+                                    <option value="1" class="fa fa-picture-o">Landscape</option>
+                                    <option value="2" class="fa fa-barcode">Portrait</option>
+                                    <option value="3" class="fa fa-area-chart">Skew Framed</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dt-sc-one-fifth column">
+                        <div class="categories">
+                            <h5>Color</h5>
+                            <div class="selection-box">
+                                <select class="shop-dropdown">
+                                    <option value="-1" selected>Choose your color</option>
+                                    <option value="1" class="fa fa-bookmark red">Red</option>
+                                    <option value="2" class="fa fa-bookmark yellow">Yellow</option>
+                                    <option value="3" class="fa fa-bookmark blue">Blue</option>
+                                    <option value="4" class="fa fa-bookmark green">Green</option>
+                                    <option value="5" class="fa fa-bookmark black">Black</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="products isotope">
+                    @Html.Partial("fetchProduct",ViewData["product"])
+                </ul>
+                <div class="container">
+                    <div class="dt-sc-post-pagination">
+                        <a class="dt-sc-button small type3 with-icon prev-post" href="#"> <span> Previous </span> <i class="fa fa-hand-o-left"> </i> </a>
+                        <a class="dt-sc-button small type3 with-icon next-post" href="#"><i class="fa fa-hand-o-right"> </i> <span> Next </span> </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</div>
