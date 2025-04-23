@@ -1,0 +1,132 @@
+﻿@model UserTb
+
+<!-- container section start -->
+<section id="container" class="container">
+
+
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header"><i class="fa fa-user-md"></i> Update User</h3>
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="@Url.Action("index","admin")">Home</a></li>
+                        <li><i class="icon_documents_alt"></i>Pages</li>
+                        <li><i class="fa fa-user-md"></i>Update User</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <!-- profile-widget -->
+                <!-- page start-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <header class="panel-heading tab-bg-info">
+                                <ul class="nav nav-tabs">
+
+
+                                    <li class="">
+                                        <a data-toggle="tab" href="#edit-profile">
+                                            <i class="icon-envelope"></i>
+                                            Update User
+                                        </a>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="panel-body">
+                                <div>
+                                    <div id="edit-profile" class="tab-pane">
+                                        <section class="panel">
+                                            <div class="panel-body bio-graph-info">
+                                                <h1> User Info</h1>
+                                                <form class="form-horizontal" role="form" method="post" action="" enctype="multipart/form-data">
+
+                                                    <div class="form-group">
+
+                                                        <div class="col-lg-6">
+                                                            <input class=" form-control" id="adminname" name="user_id" type="hidden" value="@Model.user_id">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">User Name</label>
+                                                        <div class="col-lg-6">
+                                                            <input class=" form-control" id="adminname" name="user_name" type="text" value="@Model.user_name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">User Contact</label>
+                                                        <div class="col-lg-6">
+                                                            <input class="form-control " id="contactnumber" name="user_phone" type="text" value="@Model.user_phone">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">User Email</label>
+                                                        <div class="col-lg-6">
+                                                            <input class="form-control " id="email" name="user_email" type="text" value="@Model.user_email">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">User Password</label>
+                                                        <div class="col-lg-6">
+                                                            <input class="form-control " id="contactnumber" name="user_password" type="password" value="@Model.user_password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">User Gender</label>
+                                                        <div class="col-lg-6">
+                                                            <input class="form-control " id="email" name="user_gender" type="text" value="@Model.user_gender">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">User Country</label>
+                                                        <div class="col-lg-6">
+                                                            <input class="form-control " id="email" name="user_country" type="text" value="@Model.user_country">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">User City</label>
+                                                        <div class="col-lg-6">
+                                                            <input class="form-control " id="email" name="user_city" type="text" value="@Model.user_city">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">User Address</label>
+                                                        <div class="col-lg-6">
+                                                            <input class="form-control " id="email" name="user_address" type="text" value="@Model.user_address">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">User Image</label>
+                                                        <div class="col-lg-6">
+                                                            <input class=" form-control" id="adminimage" name="user_image" type="file" value="@Model.user_image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-lg-offset-2 col-lg-10">
+                                                            <button type="submit" class="btn btn-primary" value="Update User" name="submit">Update</button>
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- page end-->
+        </section>
+    </section>
+    <!--main content end-->
+
+</section>
+
+
+

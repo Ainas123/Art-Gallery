@@ -1,0 +1,46 @@
+﻿@model ProductTb
+<!-- container section start -->
+<section id="container" class="container">
+
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header"><i class="fa fa-table"></i>Product Details</h3>
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="@Url.Action("index","admin")">Home</a></li>
+                        <li><i class="fa fa-user"></i>Product Details</li>
+                        <li><i class="fa fa-th-list"></i>Product Details</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- page start-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Product Details
+                        </header>
+                        <div class=" panel-body">
+                            <img src="@("~/product_images/"+Model.product_image)" asp-append-version="true"
+                                 width="250px" height="250px" class="my-3" />
+                                 <br />
+                                 <br /> 
+                            <ul class="list-group mt-1">
+                                <li class="list-group-item">Product Id : @Model.product_id</li>
+                                <li class="list-group-item">Product Name : @Model.product_name </li>
+                                <li class="list-group-item">Product Price : @Model.product_price</li>
+                                <li class="list-group-item">Product Description : @Model.product_description </li>
+                                <li class="list-group-item">Product Category : @Model.Category.category_name </li>
+                              
+
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section>
+    </section>
+</section>        

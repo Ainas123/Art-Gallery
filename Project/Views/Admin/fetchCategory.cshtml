@@ -1,0 +1,59 @@
+﻿@model List<CategoryTb>
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-table"></i> Manage Categories</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="@Url.Action("index","admin")">Home</a></li>
+                    <li><i class="fas fa-th-large"></i>User</li>
+                    <li><i class="fa fa-th-list"></i>Manage Categories</li>
+                </ol>
+            </div>
+        </div>
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Manage Categories
+                    </header>
+                    <table class="table">
+                        <thead>
+
+                            <tr>
+                                <th>Category Id</th>
+                                <th>Category Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var cat in Model)
+                            {
+                                <tr>
+                                    <td>@cat.category_id</td>
+                                    <td>@cat.category_name</td>
+                                    
+                                    <td>
+                                        <a href="@Url.Action("updateCategory","Admin",new{id=@cat.category_id})" class="btn btn-warning">Update</a>
+                                        @* || <a href="@Url.Action("userDetails","Admin",new{id=@cat.category_id})" class="btn btn-success">Details</a> *@
+                                        || <a href="@Url.Action("deletePermissionCategory","Admin",new{id=cat.category_id})" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+
+                    </table>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- page end-->
+    </section>
+</section>
+
+<!--main content end-->

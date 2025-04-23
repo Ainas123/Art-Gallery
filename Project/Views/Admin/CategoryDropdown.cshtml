@@ -1,0 +1,13 @@
+﻿@model List<CategoryTb>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Product Category</label>
+    <div class="col-sm-6 ">
+        <select class="form-select form-control" name="cat_id">
+            <option hidden>Select Any Category</option>
+            @foreach (var cat in Model)
+            {
+                <option value="@cat.category_id" selected="@cat.category_id==ViewBag.selectedCategoryId">@cat.category_name</option>
+            }
+        </select>
+    </div>
+</div>

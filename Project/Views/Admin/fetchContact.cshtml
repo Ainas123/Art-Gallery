@@ -1,0 +1,67 @@
+﻿@model List<FeedbackTb>
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-table"></i> All Feedback</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="@Url.Action("index","admin")">Home</a></li>
+                    <li><i class="fa fa-users"></i>Contact</li>
+                    <li><i class="fa fa-th-list"></i>Manage Feedback</li>
+                </ol>
+            </div>
+        </div>
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Manage Feedback
+                    </header>
+                    <table class="table">
+                        <thead>
+
+                            <tr>
+                                <th>S.No</th>
+                                <th>User Name</th>
+                                <th>User Email</th>
+                                <th>User Country</th>
+                                <th>User Message</th>
+
+
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var feedback in Model)
+                            {
+                                <tr>
+                                    <td>@feedback.feedback_id</td>
+                                    <td>@feedback.user_name</td>
+                                    <td>@feedback.user_email</td>
+                                    <td>@feedback.user_country</td>
+                                    <td>@feedback.user_message</td>
+
+
+                                    <td>
+
+                                        <a href="@Url.Action("deletePermissionContact","Admin",new{id=feedback.feedback_id})" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+
+                    </table>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- page end-->
+    </section>
+</section>
+
+<!--main content end-->

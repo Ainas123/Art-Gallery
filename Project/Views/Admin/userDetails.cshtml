@@ -1,0 +1,48 @@
+﻿@model UserTb;
+<!-- container section start -->
+<section id="container" class="container">
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-table"></i>User Details</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="@Url.Action("index","admin")">Home</a></li>
+                    <li><i class="fa fa-user"></i>User</li>
+                    <li><i class="fa fa-th-list"></i>User Details</li>
+                </ol>
+            </div>
+        </div>
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        User Details
+                    </header>
+                        <div class=" panel-body">
+                            <img src="@("~/user_image/"+Model.user_image)" asp-append-version = "true" 
+                            width="250px" height="300px" class="my-3"/>
+                            <br /><br />
+                            <ul class="list-group mt-1">
+                                <li class="list-group-item">User Id : @Model.user_id</li>
+                                <li class="list-group-item">User Name : @Model.user_name </li>
+                                <li class="list-group-item">User Phone : @Model.user_phone </li>
+                                <li class="list-group-item">User Email : @Model.user_email </li>
+                                <li class="list-group-item">User Password : @Model.user_password </li>
+                                <li class="list-group-item">User Gender : @Model.user_gender </li>
+                                <li class="list-group-item">User Country : @Model.user_country </li>
+                                <li class="list-group-item">User City : @Model.user_city </li>
+                                <li class="list-group-item">User Address : @Model.user_address </li>
+                            
+                            </ul>
+                        </div>
+                    </section>
+                    </div>
+</div>
+
+        </section>
+        </section>
+</section>        

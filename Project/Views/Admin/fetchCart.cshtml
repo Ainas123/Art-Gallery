@@ -1,0 +1,67 @@
+﻿@model List<CartTb>
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-table"></i> Manage Product</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="@Url.Action("index","admin")">Home</a></li>
+                    <li><i class="fa fa-user"></i>Cart</li>
+                    <li><i class="fa fa-th-list"></i>Manage Cart</li>
+                </ol>
+            </div>
+        </div>
+        <!-- page start-->
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Manage Cart
+                    </header>
+                    <table class="table">
+                        <thead>
+
+                            <tr>
+                                
+                                <th>Product Name</th>
+                                <th>User Name</th>
+                                <th>Product Quantity</th>
+                                <th>Status</th>
+
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var cart in Model)
+                            {
+                                <tr>
+                                    
+                                    <td>@cart.products.product_name</td>
+                                    <td>@cart.user.user_name</td>
+                                    <td>@cart.product_quantity</td>
+                                    <td>@cart.cart_status</td>
+                                   
+
+                                    <td>
+                                        <a href="@Url.Action("updateCart","Admin",new{id=cart.cart_id})" class="btn btn-warning">Update</a>
+                                 
+                                        || <a href="@Url.Action("deletePermissionCart","Admin",new{id=cart.cart_id})" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+
+                    </table>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- page end-->
+    </section>
+</section>
+
+<!--main content end-->

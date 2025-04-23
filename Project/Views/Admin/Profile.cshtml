@@ -1,0 +1,127 @@
+﻿@model List<AdminTb>
+
+    <!-- container section start -->
+    <section id="container" class="container">
+
+
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="page-header"><i class="fa fa-user-md"></i> Profile</h3>
+                        <ol class="breadcrumb">
+                            <li><i class="fa fa-home"></i><a href="@Url.Action("index","admin")">Home</a></li>
+                            <li><i class="icon_documents_alt"></i>Pages</li>
+                            <li><i class="fa fa-user-md"></i>Profile</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- profile-widget -->
+                    <!-- page start-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <section class="panel">
+                                <header class="panel-heading tab-bg-info">
+                                    <ul class="nav nav-tabs">
+
+
+                                        <li class="">
+                                            <a data-toggle="tab" href="#edit-profile">
+                                                <i class="icon-envelope"></i>
+                                                Edit Profile
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </header>
+                                <div class="panel-body">
+                                    <div>
+                                        <div id="edit-profile" class="tab-pane">
+                                            <section class="panel">
+                                                <div class="panel-body bio-graph-info">
+                                                    <h1> Profile Info</h1>
+                                                    <form class="form-horizontal" role="form" method="post" action="">
+
+                                                        <div class="form-group">
+
+                                                            <div class="col-lg-6">
+                                                                <input class=" form-control" id="adminname" name="admin_id" type="hidden" value="@Model[0].admin_id">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-lg-2 control-label">Admin Name</label>
+                                                            <div class="col-lg-6">
+                                                                <input class=" form-control" id="adminname" name="admin_name" type="text" value="@Model[0].admin_name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-lg-2 control-label">Admin Email</label>
+                                                            <div class="col-lg-6">
+                                                                <input class="form-control " id="email" name="admin_email" type="text" value="@Model[0].admin_email">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-lg-2 control-label">Admin Password</label>
+                                                            <div class="col-lg-6">
+                                                                <input class="form-control " id="contactnumber" name="admin_password" type="password" value="@Model[0].admin_password">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+
+                                                            <div class="col-lg-6">
+                                                                <input class=" form-control" id="adminimage" name="admin_image" type="hidden" value="@Model[0].admin_image">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="col-lg-offset-2 col-lg-10">
+                                                                <button type="submit" class="btn btn-primary" value="Update Profile" name="submit">Update</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                <form class="form-horizontal" role="form" method="post" asp-action="ChangeProfileImage" enctype="multipart/form-data">
+                                                    <div class="form-group">
+
+                                                        <div class="col-lg-6">
+                                                            <input class=" form-control" id="adminname" name="admin_id" type="hidden" value="@Model[0].admin_id">
+                                                            <input class="form-control " id="email" name="admin_email" type="hidden" value="@Model[0].admin_email">
+                                                            <input class=" form-control" id="adminname" name="admin_name" type="hidden" value="@Model[0].admin_name">
+                                                            <input class="form-control " id="contactnumber" name="admin_password" type="hidden" value="@Model[0].admin_password">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-lg-2 control-label">Admin Image</label>
+                                                        <div class="col-lg-6">
+                                                            <input class=" form-control" id="adminimage" name="admin_image" type="file" value="">
+                                                            <br />
+                                                            <img src="@("~/admin-image/"+Model[0].admin_image)" asp-append-version="true" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-lg-offset-2 col-lg-10">
+                                                            <button type="submit" class="btn btn-primary" value="Change Profile" name="submit">Change Image</button>
+
+                                                        </div>
+                                                    </div>
+                                                    </form>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!-- page end-->
+            </section>
+        </section>
+        <!--main content end-->
+
+    </section>
+
+
+    
