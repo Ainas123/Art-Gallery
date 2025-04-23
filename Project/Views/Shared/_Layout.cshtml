@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Red Art - Digital Painting</title>
+    <meta name="description" >
+    <meta name="author" >
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link id="default-css" rel="stylesheet" href="~/style/layout/style.css" type="text/css" media="all" />
+
+    <link href="~/style/layout/css/animations.css" rel="stylesheet" type="text/css" media="all" />
+    <link id="shortcodes-css" href="~/style/layout/css/shortcodes.css" rel="stylesheet" type="text/css" media="all" />
+    <link id="skin-css" href="~/style/layout/skins/red/style.css" rel="stylesheet" media="all" />
+    <link href="~/style/layout/css/isotope.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/style/layout/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <link href="~/style/layout/css/pace.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/style/layout/css/responsive.css" type="text/css" media="all" />
+    <link id="light-dark-css" href="~/style/layout/dark/dark.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/style/layout/css/font-awesome.min.css" type="text/css" />
+
+    <script src="~/style/layout/js/modernizr.js"></script>
+</head>
+<body>
+   @*  <div class="loader-wrapper">
+        <div id="large-header" class="large-header">
+            <h1 class="loader-title"><span>Red</span> Art</h1>
+        </div>
+    </div> *@
+
+
+    <div class="inner-wrapper">
+        <div class="slider-container container-fluid">
+            <div class="slider fullwidth-section parallax"></div>
+        </div>
+        <div class="breadcrumb">
+            <div class="container">
+
+                <div class="user-summary">
+                    <div class="account-links">
+                        <a href="@Url.Action("userProfile","user")">Account</a>
+                        <a href="#">Checkout</a>
+                    </div>
+                    <div class="cart-count">
+                        <a href="#">Shopping Bag: 0 items</a>
+                        <a href="#">($0.00)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header-wrapper" class="dt-sticky-menu">
+            <div id="header" class="header">
+                <div class="container menu-container">
+                    <a class="logo" href="index.html"><img alt="Logo" src="~/style/layout/images/logo.png"></a>
+                    <a href="#" class="menu-trigger">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+            <nav id="main-menu">
+                <div id="dt-menu-toggle" class="dt-menu-toggle">
+                    Menu
+                    <span class="dt-menu-toggle-icon"></span>
+                </div>
+                <ul class="menu type1">
+                    <li class="current_page_item menu-item-simple-parent">
+                        <a href="@Url.Action("index","user")">Home <span class="fa fa-home"></span></a>
+
+                    </li>
+                    <li class="menu-item-simple-parent">
+                        <a href="@Url.Action("about","user")">About us <span class="fa fa-user-secret"></span></a>
+                    </li>
+                   
+                    <li class="menu-item-simple-parent">
+                        <a href=" @Url.Action("arts","user")">Arts <span class="fa fa-cart-plus"></span></a>
+                        <ul class="sub-menu">
+                           @*  <li><a href="@Url.Action("","user")">Shop Detail</a></li> *@
+                            <li><a href="@Url.Action("cart","user")">Cart Page</a></li>
+                            <li><a href="@Url.Action("checkout","user")">Checkout Page</a></li>
+                        </ul>
+                        <a class="dt-menu-expand">+</a>
+                    </li>
+                    <li class="menu-item-simple-parent">
+                        <a href="@Url.Action("contact","user")">contact<span class="fa fa-map-marker"></span></a>
+                    </li>
+                    <li class="menu-item-simple-parent">
+                        <a href="@Url.Action("about","user")">Pages <span class="fa fa-pencil-square-o"></span></a>
+                        <ul class="sub-menu">
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#frame">Frames</a></li>
+                        </ul>
+                        <a class="dt-menu-expand">+</a>
+                    </li>
+                    <li class="menu-item-simple-parent">
+                        <a href="@Url.Action("login","admin")">Admin<span class="fa fa-map-marker"></span></a>
+                    </li>
+                       
+                            @if(string.IsNullOrEmpty(ViewBag.checkSession))
+                        {
+                            <li>
+                            <a href="@Url.Action("userLogin","user")">
+                                Login
+                            </a>
+                        </li>
+
+                    }
+                    else
+                    {
+                        <li>
+                            <a href="@Url.Action("userLogout","user")">
+                                LogOut
+                            </a>
+                        </li>
+                    }
+
+                        </ul>
+            </nav>
+        </div>
+        
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer id="footer" class="animate" data-animation="fadeIn" data-delay="100">
+                <div class="container">
+                    <div class="copyright">
+                        <ul class="footer-links">
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Faq</a></li>
+                        </ul>
+                        <ul class="payment-options">
+                            <li><a href="#" class="fa fa-cc-amex"></a></li>
+                            <li><a href="#" class="fa fa-cc-mastercard"></a></li>
+                            <li><a href="#" class="fa fa-cc-visa"></a></li>
+                            <li><a href="#" class="fa fa-cc-discover"></a></li>
+                            <li><a href="#" class="fa fa-cc-paypal"></a></li>
+                        </ul>
+                        <p>© 2015 <a href="#">RED ART</a>. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+ 
+    
+
+    
+   
+    <script src="~/style/layout/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="~/style/layout/js/jquery.inview.js" type="text/javascript"></script>
+    <script src="~/style/layout/js/jquery.viewport.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/style/layout/js/jquery.isotope.min.js"></script>
+    <script src="~/style/layout/js/jsplugins.js" type="text/javascript"></script>
+    <script src="~/style/layout/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="~/style/layout/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/style/layout/js/jquery.tipTip.minified.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/style/layout/js/jquery.bxslider.min.js"></script>
+    <script src="~/style/layout/js/controlpanel.js" type="text/javascript"></script>
+    <script src="~/style/layout/js/custom.js"></script>
+
+</body>
+</html>

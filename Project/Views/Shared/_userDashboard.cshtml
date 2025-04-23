@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Art Gallery Management System - Admin Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="~/style/user/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="~/style/user/css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="~/style/user/css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="~/style/user/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- full calendar css-->
+    <link href="~/style/user/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    <link href="~/style/user/assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <!-- easy pie chart-->
+    <link href="~/style/user/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="~/style/user/css/owl.carousel.css" type="text/css">
+    <link href="~/style/user/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="~/style/user/css/fullcalendar.css">
+    <link href="~/style/user/css/widgets.css" rel="stylesheet">
+    <link href="~/style/user/css/style.css" rel="stylesheet">
+    <link href="~/style/user/css/style-responsive.css" rel="stylesheet" />
+    <link href="~/style/user/css/xcharts.min.css" rel=" stylesheet">
+    <link href="~/style/user/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <!-- container section start -->
+    <section id="container" class="">
+        <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="dashboard.html" class="logo"><span class="lite"><strong> ART GALLERY | USER PANNEL</strong></span></a>
+            <!--logo end-->
+
+            <div class="top-nav notification-row">
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="~/style/admin/images/av1.jpg" width="40" height="30">
+                            </span>
+
+                            <span class="username"></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top">
+                                <a href="@Url.Action("userProfile","user")"><i class="icon_profile"></i> My Profile</a>
+                            </li>
+                           
+                            <li>
+                                <a href="@Url.Action("logout","user")"><i class="icon_key_alt"></i> Log Out</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+              
+            </div>
+        </header>
+        <!--header end-->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li class="active">
+                        <a class="" href="@Url.Action("userprofile","user")">
+                            <i class="icon_house_alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="far fa-user"></i>
+                            <span>My Profile</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+
+                            <li><a class="" href="@Url.Action("userProfile","user")">Manage Profile</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="far fa-edit"></i>
+                            <span>Arts</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+
+                            <li><a class="" href="@Url.Action("adduserProduct","user")">Add Art</a></li>
+                            <li><a class="" href="@Url.Action("fetchuserproduct","user")">Manage Art</a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a class="" href="order.html">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Order History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="addtocart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>My Cart</span>
+                        </a>
+                    </li>
+                  
+
+                    <li>
+                        <a class="" href="search.html">
+                            <i class="fas fa-file-alt"></i>
+                            <span>My Feedback</span>
+                        </a>
+                    </li>
+                    
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+       
+        
+        <div>
+            @RenderBody()
+        </div>
+        <div class="text-right">
+            <div class="credits">
+                <p>Art Gallery Management System.</p>
+            </div>
+        </div>
+        @*   </section> *@
+        @* </section>  *@
+
+    </section>
+    <!--main content end-->
+    <!-- container section start -->
+    <!-- javascripts -->
+    <script src="~/style/user/js/jquery.js"></script>
+    <script src="~/style/user/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="~/style/user/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="~/style/user/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!-- bootstrap -->
+    <script src="~/style/user/js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="~/style/user/js/jquery.scrollTo.min.js"></script>
+    <script src="~/style/user/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!-- charts scripts -->
+    <script src="~/style/user/assets/jquery-knob/js/jquery.knob.js"></script>
+    <script src="~/style/user/js/jquery.sparkline.js" type="text/javascript"></script>
+    <script src="~/style/user/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+    <script src="~/style/user/js/owl.carousel.js"></script>
+    <!-- jQuery full calendar -->
+    <script src="~/style/user/js/fullcalendar.min.js"></script>
+    <!-- Full Google Calendar - Calendar -->
+    <script src="~/style/user/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+    <!--script for this page only-->
+    <script src="~/style/user/js/calendar-custom.js"></script>
+    <script src="~/style/user/js/jquery.rateit.min.js"></script>
+    <!-- custom select -->
+    <script src="~/style/user/js/jquery.customSelect.min.js"></script>
+    <script src="~/style/user/assets/chart-master/Chart.js"></script>
+
+    <!--custome script for all page-->
+    <script src="~/style/user/js/scripts.js"></script>
+    <!-- custom script for this page-->
+    <script src="~/style/user/js/sparkline-chart.js"></script>
+    <script src="~/style/user/js/easy-pie-chart.js"></script>
+    <script src="~/style/user/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/style/user/js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/style/user/js/xcharts.min.js"></script>
+    <script src="~/style/user/js/jquery.autosize.min.js"></script>
+    <script src="~/style/user/js/jquery.placeholder.min.js"></script>
+    <script src="~/style/user/js/gdp-data.js"></script>
+    <script src="~/style/user/js/morris.min.js"></script>
+    <script src="~/style/user/js/sparklines.js"></script>
+    <script src="~/style/user/js/charts.js"></script>
+    <script src="~/style/user/js/jquery.slimscroll.min.js"></script>
+    <script>
+        //knob
+        $(function () {
+            $(".knob").knob({
+                'draw': function () {
+                    $(this.i).val(this.cv + '%')
+                }
+            })
+        });
+
+        //carousel
+        $(document).ready(function () {
+            $("#owl-slider").owlCarousel({
+                navigation: true,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true
+
+            });
+        });
+
+        //custom select box
+
+        $(function () {
+            $('select.styled').customSelect();
+        });
+
+        /* ---------- Map ---------- */
+        $(function () {
+            $('#map').vectorMap({
+                map: 'world_mill_en',
+                series: {
+                    regions: [{
+                        values: gdpData,
+                        scale: ['#000', '#000'],
+                        normalizeFunction: 'polynomial'
+                    }]
+                },
+                backgroundColor: '#eef3f7',
+                onLabelShow: function (e, el, code) {
+                    el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+
+
+</html>
+
